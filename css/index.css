@@ -32,7 +32,7 @@ header .container:before{
 	vertical-align:	middle;
 }
 
-.container{
+.container, .add-patient-container{
 	width: 60%;
 	height: 100%;
 	margin: 0 auto;
@@ -70,30 +70,38 @@ th{
 	background-color: #EEE;
 }
 
-label{
-	color: #555;
-	display: block;
-	margin-bottom: .2em;
+#form-title {
+	margin-top: 10px;
 }
 
-.field{
-	margin: 0;
-	padding-bottom: 1em;
-	width: 100%;
-	border: 1px solid #ccc;
+label{
+	color: #555;
+	display: inline-block;
+	width: 60px;
+	font-size: 15px;
+	font-weight: bold;
+}
+
+.big-field{
+	width: 690px;
 	padding: .7em;
-	width: 100%;
+	display: inline-block;
+	font-size: 13px;
+	font-weight: bold;
 }
 
 .middle-field{
 	display: inline-block;
-	padding-right: .5em;
+	padding: .7em;
+	width: 178px;
+	font-size: 13px;
+	font-weight: bold;
 }
 
 .group{
-	width: 32%;
 	display: inline-block;
 	padding: 10px 0px;
+	margin-right: 10px;
 }
 
 button{
