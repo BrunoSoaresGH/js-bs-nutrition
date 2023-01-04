@@ -1,12 +1,25 @@
-function validatePatient(weight, height) {
-    if(weight < 0 || weight > 600 || height < 0 || height > 3){        
-        return false;    
-    }
-    return true;
+function validateName(name) {
+    return name.length > 0;
+}
+
+function validateWeight(weight) {
+    return (weight > 0 && weight < 600); 
+}
+
+function validateHeight(height) {
+    return (height > 0 && height < 3); 
+}
+
+function validateBF(bf) {
+    return (bf > 0 && bf < 70);
+}
+
+function validatePatient(name, weight, height, bf) {
+    return validateName(name) && validateWeight(weight) && validateHeight(height) && validateBF(bf);
 }
 
 function getBMI(weight, height) {
-    if(validatePatient(weight, height)) return (weight/(height*height)).toFixed(2);
+    if(validateWeight(weight) && validateHeight(height)) return (weight/(height*height)).toFixed(2);
     return "Invalid BMI"; 
 }
 
@@ -16,7 +29,7 @@ patients.forEach((patient) => {
     let patientWeight = patient.querySelector(".weight-info").textContent;
     let patientHeight = patient.querySelector(".height-info").textContent;
 
-    if(validatePatient(patientWeight, patientHeight)) {
+    if(validateWeight(patientWeight) && validateHeight(patientHeight)) {
         let patientBMIValue = getBMI(patientWeight,patientHeight);
         let patientBMI = patient.querySelector(".bmi-info");
         patientBMI.textContent = patientBMIValue;

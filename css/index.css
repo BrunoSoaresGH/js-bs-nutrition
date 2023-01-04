@@ -137,8 +137,10 @@ button[disabled=disabled], button:disabled {
     margin-top: 30px;
 }
 
-.invalid-field{
-	border: 1px solid red;
+.error-message{
+	color: red;
+	margin: 1px 0 3px 0;
+	font-weight: bold;
 }
 
 .invalid-patient {
