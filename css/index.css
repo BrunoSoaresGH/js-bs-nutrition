@@ -38,6 +38,19 @@ header .container:before{
 	margin: 0 auto;
 }
 
+.div-search {
+	margin: 10px 0;
+}
+
+.search {
+	display: inline;
+}
+
+#filter-table {
+	width: 30%;
+	padding: 2px;
+}
+
 section{
 	margin: 2em 0;
 	overflow: hidden;
@@ -150,4 +163,8 @@ button[disabled=disabled], button:disabled {
 .fadeOut{
 	opacity: 0;
 	transition: 1s;
+}
+
+.invisible {
+	display: none;
 }
